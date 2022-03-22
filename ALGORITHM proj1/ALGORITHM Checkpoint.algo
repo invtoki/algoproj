@@ -1,0 +1,24 @@
+ALGORITHM Checkpoint
+VAR
+SC, SV : INTEGER := 0;
+MOT  : INTEGER := 1;
+C : CHAR:= 'str';
+
+BEGIN
+WHILE (C <> ".") DO
+read (C);
+// number of charachters
+SC:=SC+1;   
+// number of words
+IF (C =" ") THEN
+MOT:= MOT+1 ;
+END_IF
+// number of vowels
+IF (C="a" OR C="y" OR C="e" OR C="o" OR C="u" OR C="i" OR C="A" OR C="Y" OR C="E" OR C="O" OR C="U"OR C="I"]) THEN
+SV:= SV+1;
+END_IF
+END_WHILE
+Write(" the total number of vowels is:", SV);
+Write(" the total number of characteres is:", SC);
+Write(" the total number of words is:", MOT);
+END
